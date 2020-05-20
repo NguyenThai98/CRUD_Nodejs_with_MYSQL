@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header d-flex justify-content-around">
+        <h3>Products</h3>
+        <a  class="btn btn-primary" href="/admin/products/add" role="button">@addProducts</a>
+    </div>
+    <div class="card-body">
+        {{#if this.empty}}
+        <p>Không có dữ liệu</p>
+        {{else}}
+            <div class="container">
+                <div class="row">
+                    {{#each this.products}}
+                        <div class="col-sm-4  mb-4">
+                            <div class="card h-100">
+                                <img src="/public/imgs/sp/{{ProID}}/main_thumbs.jpg" alt="{{ProName}}" title="{{ProName}} : {{Price}}" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ProName}}</h5>
+                                    <h5 class="card-title text-danger">{{format_Number Price}}</h5>
+                                    <p class="card-text">{{TinyDes}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-sm btn-outline-primary" href="javascript=;" role="button">
+                                        <i class="fa fa-eye" aria-hidden="true">Details</i>
+                                    </a>
+
+                                    <a class="btn  btn-sm btn-outline-success" href="javascript=;" role="button">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true">Add to cart</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        <h3>Edit Products</h3>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            <div class="form-group">
+                <label for="txtProName">ProID</label>
+                <input type="text" class="form-control" id="txtProID" name="ProID" value="{{this.product.ProID}}"
+                    readonly>
+            </div>
+            <div class="form-group">
+                <label for="txtProName">ProName</label>
+                <input type="text" class="form-control" id="txtProName" name="ProName" value="{{this.product.ProName}}"
+                    autofocus>
+                <label for="txtTinyDes">TinyDes</label>
+                <input type="text" class="form-control" id="txtTinyDes" value="{{this.product.TinyDes}}" name="TinyDes">
+                <label for="txtFullDes">FullDes</label>
+                <input type="text" class="form-control" id="txtFullDes" value="{{this.product.FullDes}}" name="FullDes">
+
+                <label for="txtPrice">Price</label>
+                <input type="number" class="form-control" id="txtPrice" value="{{this.product.Price}}" name="Price">
+                <label for="txtCatID">CatID</label>
+                <input type="number" class="form-control" id="txtCatID" value="{{this.product.CatID}}" name="CatID">
+                <label for="txtQuantity">Quantity</label>
+                <input type="number" class="form-control" id="txtQuantity" value="{{this.product.Quantity}}"
+                    name="Quantity">
+            </div>
+            <a class="btn btn-warning" href="/admin/products" role="button">
+                <i class="fa fa-backward" aria-hidden="true"></i>
+            </a>
+
+            <button type="submit" class="btn btn-danger" title="Remove product" formaction="/admin/products/del">
+                <i class="fa fa-trash" aria-hidden="true">Del</i>
+            </button>
+            
+            <button type="submit" class="btn btn-success" formaction="/admin/products/update">
+                <i class="fa fa-check" aria-hidden="true">Save</i>
+            </button>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
